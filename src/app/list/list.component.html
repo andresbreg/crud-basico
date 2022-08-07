@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Lista</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Tarea</th>
+            <th scope="col">Finalizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of lista">
+            <td>{{ item.id }}</td>
+            <td>{{ item.tarea }}</td>
+            <td>{{ item.finalizado }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

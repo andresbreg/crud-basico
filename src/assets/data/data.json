@@ -1,0 +1,9 @@
+{
+  "llave1": "Hola",
+  "llave2": "soy",
+  "llave3": "Aldo",
+  "llave4": 7,
+  "llave5": null,
+  "favAmigos": ["Kolade", "Nithya", "Dammy", "Jack"],
+  "favJugadores": {"uno": "Kante", "dos": "Hazard", "tres": "Didier"}
+}
