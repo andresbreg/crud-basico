@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Tarea } from '../model/Tarea';
 import { ServiceService } from '../services/service.service';
+import { Tarea } from '../model/Tarea';
 
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
+
 export class AddComponent implements OnInit {
 
   newElement: Tarea = {id:'', tarea:'', finalizado:false};
@@ -20,8 +21,7 @@ export class AddComponent implements OnInit {
 
   saveElement() {
     this.ServiceService.addElement(this.newElement).subscribe (
-      response => {console.log(response)}
+      response => {this.router.navigate(["list"])}
     );
-    this.router.navigate(["list"]);
   }
 }

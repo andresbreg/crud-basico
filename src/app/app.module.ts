@@ -8,15 +8,13 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     AddComponent,
-    EditComponent,
-    DeleteComponent
+    EditComponent
   ],
   imports: [
     BrowserModule,

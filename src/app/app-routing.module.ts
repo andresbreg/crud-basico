@@ -8,7 +8,7 @@ const routes: Routes = [
   // { path:'', redirectTo:'./app.component.html', pathMatch:'full' },
   { path:'list', component:ListComponent },
   { path:'add', component:AddComponent },
-  { path:'edit', component:EditComponent }
+  { path:'edit', component:EditComponent },
 ];
 
 @NgModule({

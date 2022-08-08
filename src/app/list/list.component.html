@@ -10,6 +10,7 @@
             <th scope="col">Id</th>
             <th scope="col">Tarea</th>
             <th scope="col">Finalizado</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -17,6 +18,10 @@
             <td>{{ item.id }}</td>
             <td>{{ item.tarea }}</td>
             <td>{{ item.finalizado }}</td>
+            <td>
+              <button class="btn btn-warning" (click)="edit()">Editar</button>
+              <button class="btn btn-danger" (click)="remove(item.id)">Eliminar</button>
+            </td>
           </tr>
         </tbody>
       </table>

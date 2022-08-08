@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   edit() {
-    this.router.navigate(["edit"]);
+    this.router.navigate(["list"]);
   }
 
   remove() {
