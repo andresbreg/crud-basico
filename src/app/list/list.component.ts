@@ -12,8 +12,7 @@ export class ListComponent implements OnInit {
 
   lista:any=[];
 
-  constructor(private data:ServiceService,
-              private serviceService: ServiceService) {
+  constructor(private serviceService: ServiceService) {
   }
 
   ngOnInit(): void {

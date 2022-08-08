@@ -20,7 +20,7 @@ export class ServiceService {
     return this.http.get(this.Url + '/' + id);
   }
 
-  saveElement(tarea: Tarea):Observable<any> {
+  addElement(tarea: Tarea):Observable<any> {
     return this.http.post(this.Url, tarea);
   }
 

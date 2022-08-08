@@ -1,1 +1,13 @@
-<p>add works!</p>
+<h2>Agregar Nuevo Elemento a la Lista</h2>
+<div class="container">
+  <form action="">
+      <label for="tarea" id="tarea">Tarea</label>
+      <input type="text" id="tarea" name="tarea" [(ngModel)]="newElement.tarea">
+      <div>
+        <label for="estado" id="estado">Estado</label>
+        <input type="checkbox" id="estado" name="estado" [(ngModel)]="newElement.finalizado">
+      </div>
+      <br>
+      <button class="btn btn-success" (click)="saveElement()">Guardar</button>
+  </form>
+</div>

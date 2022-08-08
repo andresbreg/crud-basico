@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Tarea } from '../model/Tarea';
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  newElement: Tarea = {id:'', tarea:'', finalizado:false};
+
+  constructor(private ServiceService:ServiceService,
+              private router:Router) {}
 
   ngOnInit(): void {
   }
 
+  saveElement() {
+    this.ServiceService.addElement(this.newElement).subscribe (
+      response => {console.log(response)}
+    );
+    this.router.navigate(["list"]);
+  }
 }

@@ -1,0 +1,35 @@
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 20px;
+  width: 320px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+#tarea {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#estado {
+  margin-right: 10px;
+}

@@ -1,9 +1,15 @@
-button  {
-  margin: 10px;
- }
+h1 {
+  text-align: center;
+  margin: 20px;
+}
 
- .container {
+.container {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid antiquewhite;
+  padding-bottom: 20px;
+}
+
+button  {
+  margin: 10px;
  }
