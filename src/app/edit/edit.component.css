@@ -10,11 +10,10 @@ h2 {
 
 form {
   display: grid;
-  justify-content: center;
   border: 1px solid black;
   margin-top: 20px;
   padding: 20px;
-  width: 320px;
+  width: 520px;
 }
 
 label {

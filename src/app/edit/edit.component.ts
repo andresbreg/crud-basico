@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../services/service.service';
-import { Router } from '@angular/router';
+import { Tarea } from '../model/Tarea';
 
 @Component({
   selector: 'app-edit',
@@ -10,12 +11,24 @@ import { Router } from '@angular/router';
 
 export class EditComponent implements OnInit {
 
-  // selectedElement: Tarea = {id:'', tarea:'', finalizado:false};
+  id: String = '';
+  selectedElement: Tarea = {id:this.id, tarea:'', finalizado:false};
 
   constructor(private serviceService: ServiceService,
-              private router:Router
-              ) {}
+              private router:Router,
+              private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.id = this.activatedRoute.snapshot.params['id'];
+    console.log(this.id);
+    this.serviceService.getElement(this.id).subscribe (
+      response => {this.selectedElement = response}
+    );
+  }
+
+  updateElement() {
+    this.serviceService.editElement(this.id, this.selectedElement).subscribe (
+      response => {this.router.navigate(['list'])}
+    );
   }
 }

@@ -19,7 +19,7 @@
             <td>{{ item.tarea }}</td>
             <td>{{ item.finalizado }}</td>
             <td>
-              <button class="btn btn-warning" (click)="edit()">Editar</button>
+              <button class="btn btn-warning" [routerLink]="['/edit', item.id]">Editar</button>
               <button class="btn btn-danger" (click)="remove(item.id)">Eliminar</button>
             </td>
           </tr>

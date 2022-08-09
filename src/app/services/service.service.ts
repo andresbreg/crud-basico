@@ -8,6 +8,8 @@ import { Tarea } from '../model/Tarea';
 })
 export class ServiceService {
 
+  tarea = {id:String, tarea:String, finalizado:Boolean};
+
   constructor(private http:HttpClient) {}
 
   Url='http://localhost:8080/api/tareas';
@@ -16,7 +18,7 @@ export class ServiceService {
     return this.http.get(this.Url);
   }
 
-  getElement(id: String):Observable<any> {
+  getElement(id:String):Observable<any> {
     return this.http.get(this.Url + '/' + id);
   }
 

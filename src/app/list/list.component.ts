@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './../services/service.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list',
@@ -12,8 +12,7 @@ export class ListComponent implements OnInit {
 
   lista:any=[];
 
-  constructor(private serviceService: ServiceService,
-              private router:Router) {}
+  constructor(private serviceService: ServiceService) {}
 
   ngOnInit(): void {
     this.list();
@@ -22,10 +21,6 @@ export class ListComponent implements OnInit {
   list() {
     this.serviceService.getData().subscribe (
       response => {this.lista = response});
-  }
-
-  edit() {
-    this.router.navigate(["edit"]);
   }
 
   remove(id:String) {
